@@ -4,11 +4,11 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: "Digital Gate",
+  title: "Cyber Pilot",
   description:
-    "Digital Gate started with a vision for building an agency to solve the business problems of the future, and that requires a different model. We're not a branding agency that dabbles in tech, and we're not a development shop that leaves you hanging when it's time to go to market. We start with human experience and layer in technology and marketing & deliver truly integrated digital solutions",
+    "Cyber Pilot started with a vision for building an agency to solve the business problems of the future, and that requires a different model. We're not a branding agency that dabbles in tech, and we're not a development shop that leaves you hanging when it's time to go to market. We start with human experience and layer in technology and marketing & deliver truly integrated digital solutions",
   keywords: [
-    "Digital Gate",
+    "Cyber Pilot",
     "business solutions",
     "technology",
     "marketing",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "ai solutions",
     "security",
   ],
-  authors: [{ name: "Digital Gate" }],
+  authors: [{ name: "Cyber Pilot" }],
   robots: "index, follow",
   icons: ["/icon.png"],
 };

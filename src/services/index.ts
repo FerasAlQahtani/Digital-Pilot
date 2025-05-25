@@ -27,10 +27,10 @@ export async function sendEmail({
   await transporter.sendMail({
     from: process.env.AUTH_EMAIL,
     to: "digitalg8t@gmail.com" as string,
-    subject: `Digital Gate: New message from ${firstName} ${lastName}`,
+    subject: `Cyber Pilot: New message from ${firstName} ${lastName}`,
     html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-        <h2 style="color: #111;">New message from Digital Gate</h2>
+        <h2 style="color: #111;">New message from Cyber Pilot</h2>
         <p><strong>First Name:</strong> ${firstName}</p>
         <p><strong>Last Name:</strong> ${lastName}</p>
         <p><strong>Email:</strong> ${email}</p>
