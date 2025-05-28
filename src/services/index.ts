@@ -26,7 +26,7 @@ export async function sendEmail({
 
   await transporter.sendMail({
     from: process.env.AUTH_EMAIL,
-    to: "digitalg8t@gmail.com" as string,
+    to: "sales@cyberpilot.sa" as string,
     subject: `Cyber Pilot: New message from ${firstName} ${lastName}`,
     html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
