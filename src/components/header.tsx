@@ -38,7 +38,7 @@ const Header = ({ locale }: { locale: string }) => {
             </Link>
             <Link
               className="bg-gradient-to-r from-[#15a360] to-[#25d366] text-sm font-semibold sm:text-[15px] text-white py-2 px-2 rounded-md"
-              href="https://wa.me/966509454594?text=Hello%2C%20I%20am%20interested%20in%20your%20services."
+              href="https://wa.me/966538474397?text=Hello%2C%20I%20am%20interested%20in%20your%20services."
               target="_blank"
               rel="noopener noreferrer"
             >
