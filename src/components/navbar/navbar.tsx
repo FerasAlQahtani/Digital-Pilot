@@ -12,14 +12,16 @@ const LandingNavbar = ({ locale }: { locale: string }) => {
 
   return (
     <nav className={`w-full bg-background font-primary py-3.5 flex justify-between items-center px-6 md:px-10 xl:px-16 sticky top-0 z-50 dark:border-b shadow-sm ${locale === 'ar' && 'flex-row-reverse'}`}>
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-0 items-center">
         <Image 
             src="/logo.png"
             alt="Cyber Pilot Logo"
-            height={30}
-            width={30}
+            height={70}
+            width={70}
           />
-        <h1 className="font-bold text-lg">Cyber Pilot</h1>
+        <h1 className="text-1xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+        Cyber Pilot
+        </h1>        
         </div>
       <div className={`hidden xl:flex items-center gap-8 text-sm font-medium text-muted 2xl:absolute 2xl:bottom-[50%] 2xl:right-[50%] 2xl:translate-x-1/2 2xl:translate-y-1/2 ${locale === 'ar' && 'flex-row-reverse'}`}>
         <Navigation locale={locale} />

@@ -26,7 +26,9 @@ const LandingDrawer = ({ locale }: { locale: string }) => {
       <SheetContent side={"top"} className="noclose font-primary p-0 border-none">
         <SheetTitle className="hidden">Drawer</SheetTitle>
         <div className="w-full py-3.5 flex flex-row justify-between items-center px-6 md:px-10 xl:px-16 shadow-sm">
-          <h1 className="font-primary font-bold text-lg">Cyber Pilot</h1>
+          <h1 className="text-1xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+              Cyber Pilot
+          </h1>        
           <X
             className="cursor-pointer h-5 w-5"
             onClick={() => setOpen(false)}

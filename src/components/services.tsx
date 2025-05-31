@@ -11,104 +11,84 @@ import {
   Settings,
   Smartphone,
 } from "lucide-react";
-import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Services = ({ locale }: { locale: string }) => {
   const t = useTranslations("Landing");
+
+  const serviceItems = [
+    {
+      icon: <Hash className="text-gradientend h-7 w-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+      titleKey: "ui-ux-title",
+      descriptionKey: "ui-ux-description",
+      message: "Hello, I am interested in your UI/UX services."
+    },
+    {
+      icon: <Smartphone className="text-gradientend h-7 w-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+      titleKey: "mobile-title",
+      descriptionKey: "mobile-description",
+      message: "Hello, I would like to know more about your mobile app development."
+    },
+    {
+      icon: <Laptop className="text-gradientend h-7 w-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+      titleKey: "web-title",
+      descriptionKey: "web-description",
+      message: "Hi, I am looking for web development services."
+    },
+    {
+      icon: <SearchCheck className="text-gradientend h-7 w-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+      titleKey: "seo-title",
+      descriptionKey: "seo-description",
+      message: "Hello, I need help with SEO optimization."
+    },
+    {
+      icon: <BarChart2 className="text-gradientend h-7 w-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+      titleKey: "enterprise-title",
+      descriptionKey: "enterprise-description",
+      message: "Hi, I am interested in your enterprise solutions."
+    },
+    {
+      icon: <Settings className="text-gradientend h-7 w-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+      titleKey: "maintenance-title",
+      descriptionKey: "maintenance-description",
+      message: "Hello, I am looking for maintenance and support services."
+    },
+  ];
+
+  const phone = "966538474397";
+
   return (
     <section id="services" className="w-full space-y-8 md:space-y-12">
       <header className="font-primary text-center flex flex-col items-center gap-2 md:gap-4 px-2.5 text-xs md:text-sm xl:text-[15px]">
-        <motion.h1
-          initial={{ y: -80 }}
-          animate={{ y: 0 }}
-          className="text-4xl md:text-5xl font-bold max-w-[400px] sm:max-w-[500px] md:max-w-[600px] 2xl:leading-[43px]"
-        >
+        <h1 className="text-4xl md:text-5xl font-bold max-w-[400px] sm:max-w-[500px] md:max-w-[600px] 2xl:leading-[43px]">
           {t("services-title")}
-        </motion.h1>
-        <motion.p
-          initial={{ y: -50 }}
-          animate={{ y: 0 }}
-          className="text-base md:text-lg font-medium text-muted max-w-[800px] xl:max-w-[550px]"
-        >
+        </h1>
+        <p className="text-base md:text-lg font-medium text-muted max-w-[800px] xl:max-w-[550px]">
           {t("services-description")}
-        </motion.p>
+        </p>
       </header>
-      <motion.div
-        initial={{ y: 40, scale: 0.8 }}
-        animate={{ y: 0, scale: 1 }}
+      <div
         className="w-full grid grid-cols-2 xl:grid-cols-3 gap-2 xl:gap-6"
         dir={locale === "ar" ? "rtl" : "ltr"}
       >
-        <motion.div
-        initial={{ y: 200, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}>
-        <Service
-          icon={
-            <Hash className="text-gradientend h-7 w-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-          }
-          title={t("ui-ux-title")}
-          description={t("ui-ux-description")}
-        /></motion.div>
-        <motion.div
-        initial={{ y: 60, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1, transition: { delay: 0.08 } }}
-        >
-        <Service
-          icon={
-            <Smartphone className="text-gradientend h-7 w-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-          }
-          title={t("mobile-title")}
-          description={t("mobile-description")}
-        /></motion.div>
-        <motion.div
-        initial={{ y: 60, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1, transition: { delay: 0.16 } }}
-        >
-        <Service
-          icon={
-            <Laptop className="text-gradientend h-7 w-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-          }
-          title={t("web-title")}
-          description={t("web-description")}
-        />
-        </motion.div>
-        <motion.div
-        initial={{ y: 60, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1, transition: { delay: 0.24 } }}
-        >
-        <Service
-          icon={
-            <SearchCheck className="text-gradientend h-7 w-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-          }
-          title={t("seo-title")}
-          description={t("seo-description")}
-        />
-        </motion.div>
-        <motion.div
-        initial={{ y: 60, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1, transition: { delay: 0.32 } }}
-        >
-        <Service
-          icon={
-            <BarChart2 className="text-gradientend h-7 w-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-          }
-          title={t("enterprise-title")}
-          description={t("enterprise-description")}
-        />
-        </motion.div>
-        <motion.div
-        initial={{ y: 60, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1, transition: { delay: 0.40 } }}
-        >
-        <Service
-          icon={
-            <Settings className="text-gradientend h-7 w-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-          }
-          title={t("maintenance-title")}
-          description={t("maintenance-description")}
-        />
-        </motion.div>
-      </motion.div>
+        {serviceItems.map((item, index) => {
+          const title = t(item.titleKey);
+          const description = t(item.descriptionKey);
+          const message = encodeURIComponent(item.message);
+          const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
+          return (
+            <a
+              key={index}
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block cursor-pointer transition-transform hover:scale-105 duration-200"
+            >
+              <Service icon={item.icon} title={title} description={description} />
+            </a>
+          );
+        })}
+      </div>
     </section>
   );
 };
