@@ -8,6 +8,8 @@ import { Input } from "./ui/input";
 import { useTranslations } from "next-intl";
 import { useCycle } from "motion/react";
 import { Loader } from "lucide-react";
+import Link from "next/link";
+
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
