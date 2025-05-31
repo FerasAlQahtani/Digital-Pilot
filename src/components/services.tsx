@@ -39,22 +39,16 @@ const Services = ({ locale }: { locale: string }) => {
         className="w-full grid grid-cols-2 xl:grid-cols-3 gap-2 xl:gap-6"
         dir={locale === "ar" ? "rtl" : "ltr"}
       >
-
         <motion.div
-          initial={{ y: 200, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          className="transition-transform hover:scale-105 duration-200" // optional styling
-        >
-          <Service
-            icon={
-              <Hash className="text-gradientend h-7 w-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-            }
-            title={t("ui-ux-title")}
-            description={t("ui-ux-description")}
-          />
-        </motion.div>
-
-
+        initial={{ y: 200, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}>
+        <Service
+          icon={
+            <Hash className="text-gradientend h-7 w-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
+          }
+          title={t("ui-ux-title")}
+          description={t("ui-ux-description")}
+        /></motion.div>
         <motion.div
         initial={{ y: 60, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1, transition: { delay: 0.08 } }}
