@@ -11,6 +11,8 @@ import { Loader } from "lucide-react";
 
 
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 const Contact = () => {
   const t = useTranslations("Landing");
   const { toast } = useToast();
