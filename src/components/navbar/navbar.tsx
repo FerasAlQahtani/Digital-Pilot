@@ -23,7 +23,7 @@ const LandingNavbar = ({ locale }: { locale: string }) => {
         Cyber Pilot
         </h1>        
         </div>
-      <div className={`hidden xl:flex items-center gap-8 text-sm font-medium text-muted 2xl:absolute 2xl:bottom-[50%] 2xl:right-[50%] 2xl:translate-x-1/2 2xl:translate-y-1/2 ${locale === 'ar' && 'flex-row-reverse'}`}>
+      <div className={`hidden xl:flex items-center gap-8 text-1x2 font-medium text-muted 2xl:absolute 2xl:bottom-[50%] 2xl:right-[50%] 2xl:translate-x-1/2 2xl:translate-y-1/2 ${locale === 'ar' && 'flex-row-reverse'}`}>
         <Navigation locale={locale} />
       </div>
 
