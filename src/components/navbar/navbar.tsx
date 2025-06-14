@@ -16,10 +16,10 @@ const LandingNavbar = ({ locale }: { locale: string }) => {
         <Image 
             src="/logo.png"
             alt="Cyber Pilot Logo"
-            height={70}
-            width={70}
+            height={75}
+            width={75}
           />
-        <h1 className="text-1xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+        <h1 className="w-full space-y-8 md:space-y-12 font-bold">
         Cyber Pilot
         </h1>        
         </div>
