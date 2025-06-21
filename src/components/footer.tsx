@@ -8,50 +8,45 @@ const Footer = ({ mini, locale }: { mini?: boolean; locale: string }) => {
   const t = useTranslations("Landing");
 
   return (
-    <div className="relative w-full flex-col font-primary bg-blue-900 text-white">
+    <div className="absolute w-full flex-col font-primary bg-blue-700 text-black border-t-[0.1px] border-gray-500">
       {!mini && (
-        <div className="bg-blue-900">
-          <div
-            className={`w-full px-6 py-5 sm:p-10 md:p-16 ${
-              locale === "ar" ? "text-right" : ""
-            }`}
-          >
-            <h1 className="w-3/4 sm:w-2/3 xl:w-1/2 font-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-              {t("footer-title")}
-            </h1>
-          </div>
+        <div
+          className={`w-full px-6 pt-0 pb-0 ${
+            locale === "ar" ? "text-right" : ""
+          }`}
+        >
+          
         </div>
       )}
 
-      {/* CR Logo and Info - Bottom Right */}
-      <div className="absolute bottom-12 right-20 flex items-end gap-2">
-        <div className="w-50 h-50">
-          <Image
-            src="/business-sa-logo.png" // Make sure this path is correct
-            alt="Business SA Logo"
-            width={200}
-            height={100}
-          />
+      <div className="w-full flex justify-end px-4 pb-0 pt-2">
+        <div className="flex flex-col items-end gap-2">
+          <div className="flex flex-row items-end gap-2">
+            <Image
+              src="/business-sa-logo.png"
+              alt="Business SA Logo"
+              width={80}
+              height={80}
+            />
+            <Image
+              src="/Business-sa-Cr-confirmation.png"
+              alt="Business SA QR Code"
+              width={70}
+              height={70}
+            />
+          </div>
+
+          <p className="text-xs text-blue-100 text-right px-2 pb-6">
+            {t("cr-label")}: <span className="font-semibold">0000176154</span>
+          </p>
         </div>
-      </div>
-      <div className="absolute bottom-24 right-8 flex items-end gap-2">
-        <div className="w-50 h-50">
-          <Image
-            src="/Business-sa-Cr-confirmation.png" // Make sure this path is correct
-            alt="Business SA Confirmation"
-            width={80}
-            height={80}
-          />
-        </div>
-      </div>
- <div className="absolute bottom-14 right-12 items-end">
-        <p className="text-xs text-blue-100 text-right">
-          {t("cr-label")}: <span className="font-semibold">0000176154</span>
-        </p>
       </div>
 
-      <div className="w-full flex justify-center py-1.5">
-        <p className="text-xs text-blue-100">{t("copyright")}</p>
+      {/* Centered copyright line */}
+      <div className="w-full flex justify-center pb-4">
+        <p className="text-xs text-white">
+          All rights reserved © 2024
+        </p>
       </div>
     </div>
   );

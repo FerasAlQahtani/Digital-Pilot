@@ -1,7 +1,7 @@
 {
   "Landing": {
     "home": "Home",
-    "about": "About Us",
+    "about": "Projects",
     "services": "Services",
     "contact": "Contact",
     "contact-us": "Contact us now!",
@@ -23,10 +23,10 @@
     "enterprise-description": "We turn your strategies into software systems that optimize your business performance.",
     "maintenance-title": "Maintenance",
     "maintenance-description": "We provide maintenance services to clients beyond project completion. Also, to those who have already products and need enhancement.",
-    "about-title": "About Us",
-    "about-subtitle": "We provide IT Solutions & Services",
-    "about-us-title": "We Offer Full Stack Development For Digital Innovation",
-    "about-us-description": "Cyber Pilot provides robust digital solutions that solves your business challenges. We start with human experience and layer in technology using best practices to deliver truly integrated digital solutions.",
+    "about-title": "Projects",
+    "about-subtitle": "Will be here soon...",
+    "about-us-title": "This page is under construction...",
+    "about-us-description": "This page is under construction...",
     "footer-title": "Try Cyber Pilot and see how creative our solutions can be...",
     "copyright": "© 2024. All rights reserved.",
     "contact-title": "Get In Touch",

@@ -82,9 +82,6 @@ const About = ({locale}: {locale: string}) => {
             </p>
           </div>
         </div>
-        <p className="w-full lg:hidden text-justify text-sm sm:text-base md:text-lg xl:text-xl">
-          {t("about-us-description")}
-        </p>
       </motion.div>
     </section>
   );

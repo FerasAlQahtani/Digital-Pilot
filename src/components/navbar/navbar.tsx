@@ -11,19 +11,17 @@ const LandingNavbar = ({ locale }: { locale: string }) => {
   const t = useTranslations("Landing");
 
   return (
-    <nav className={`w-full bg-background font-primary py-3.5 flex justify-between items-center px-6 md:px-10 xl:px-16 sticky top-0 z-50 dark:border-b shadow-sm ${locale === 'ar' && 'flex-row-reverse'}`}>
-      <div className="flex gap-0 items-center">
-        <Image 
-            src="/logo.png"
-            alt="Cyber Pilot Logo"
-            height={75}
-            width={75}
-          />
-        <h1 className="w-full space-y-8 md:space-y-12 font-bold">
-        Cyber Pilot
-        </h1>        
-        </div>
-      <div className={`hidden xl:flex items-center gap-8 text-1x2 font-medium text-muted 2xl:absolute 2xl:bottom-[50%] 2xl:right-[50%] 2xl:translate-x-1/2 2xl:translate-y-1/2 ${locale === 'ar' && 'flex-row-reverse'}`}>
+    <nav className={`w-full bg-background font-primary py-7 flex justify-between items-center px-6 md:px-10 xl:px-16 sticky top-0 z-50 dark:border-b shadow-sm ${locale === 'ar' && 'flex-row-reverse'}`}>
+<div className="flex items-center gap-3 mt-1">
+  <Image 
+    src="/logo.png"
+    alt="Cyber Pilot Logo"
+    height={50}
+    width={50}
+  />
+  <h1 className="font-bold -mt-3">Cyber Pilot</h1>
+</div>    
+      <div className={`hidden xl:flex items-center gap-8 text-1x2 font-medium text-muted 2xl:absolute 2xl:bottom-[55%] 2xl:right-[50%] 2xl:translate-x-1/2 2xl:translate-y-1/2 ${locale === 'ar' && 'flex-row-reverse'}`}>
         <Navigation locale={locale} />
       </div>
 
