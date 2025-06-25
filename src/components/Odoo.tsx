@@ -5,12 +5,12 @@ import React from "react";
 import Service from "./service";
 import Image from "next/image";
 import {
-  BarChart2,
-  Database,
-  Globe,
-  Settings,
+//   BarChart2,
+//   Database,
+//   Globe,
+//   Settings,
   ShoppingCart,
-  Users2,
+//   Users2,
 } from "lucide-react";
 
 const Odoo = ({ locale }: { locale: string }) => {
