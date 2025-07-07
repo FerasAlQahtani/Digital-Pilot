@@ -8,7 +8,7 @@ const Footer = ({ mini, locale }: { mini?: boolean; locale: string }) => {
   const t = useTranslations("Landing");
 
   return (
-    <div className="absolute w-full flex-col font-primary bg-blue-700 text-black border-t-[0.1px] border-gray-500">
+    <div className="absolute w-full flex-col font-primary bg-gradient-to-r from-blue-600 to-green-600">
       {!mini && (
         <div
           className={`w-full px-6 pt-0 pb-0 ${

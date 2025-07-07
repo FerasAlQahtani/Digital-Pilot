@@ -48,7 +48,7 @@ const About = ({locale}: {locale: string}) => {
               width={500}
               height={750}
             />
-          </div>
+          {/* </div>
           <div className="w-1/2 md:w-7/12 space-y-10 md:space-y-14 xl:space-y-20">
             <div className="w-full flex items-center justify-between">
               <div>
@@ -73,7 +73,7 @@ const About = ({locale}: {locale: string}) => {
                   height={300}
                 />
               </div>
-            </div>
+            </div> */}
             <p className="w-full hidden lg:block text-justify text-sm sm:text-base md:text-lg xl:text-xl">
               {t("about-us-description")}
             </p>
