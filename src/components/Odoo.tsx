@@ -4,20 +4,44 @@ import { useTranslations } from "next-intl";
 import React from "react";
 import Service from "./service";
 import Image from "next/image";
-import {
-  ShoppingCart,
-} from "lucide-react";
+import { ShoppingCart, Settings, LayoutDashboard } from "lucide-react";
 
 const Odoo = ({ locale }: { locale: string }) => {
   const t = useTranslations("Landing");
 
   const serviceItems = [
     {
-      icon: <ShoppingCart className="text-[#875A7B] h-7 w-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
-      titleKey: "odoo-erp-title",
-      descriptionKey: "odoo-erp-description",
-      message: "Hello, I’m interested in Odoo ERP implementation Odoo."
+      icon: <ShoppingCart className="text-[#875A7B] w-6 h-6" />,
+      title: "Odoo Enterprise Implemetnation",
+      description:
+        "سهولة التصفح للمتجر و سرعة استجابته و قابليته للربط مع انظمة اخرى تعتبر العوامل الاهم في نجاح متجرك الالكتروني",
+      message: "Hello, I’m interested in designing an online store using Odoo.",
+      image: "/store-design.png"
     },
+    {
+      icon: <Settings className="text-[#875A7B] w-6 h-6" />,
+      title: "Odoo Support & Upgrade",
+      description:
+        "يمكن ربط المتجر بنظام CRM لمتابعة العملاء و ادارة المبيعات و التسويق وتحسين خدمة العملاء بشكل شامل.",
+      message: "I want to know more about integrating Odoo CRM with my store.",
+      image: "/crm-setup.png"
+    },
+    {
+      icon: <LayoutDashboard className="text-[#875A7B] w-6 h-6" />,
+      title: "Odoo Module Customization",
+      description:
+        "نظام نقاط البيع من أودو يتيح لك إدارة مبيعاتك في المتجر الفعلي بكل كفاءة وتكامل مع باقي الأنظمة.",
+      message: "I'm interested in using Odoo POS solution.",
+      image: "/pos-system.png"
+    },
+    {
+      icon: <LayoutDashboard className="text-[#875A7B] w-6 h-6" />,
+      title: "Odoo Training",
+      description:
+        "نظام نقاط البيع من أودو يتيح لك إدارة مبيعاتك في المتجر الفعلي بكل كفاءة وتكامل مع باقي الأنظمة.",
+      message: "I'm interested in using Odoo POS solution.",
+      image: "/pos-system.png"
+    }
   ];
 
   const phone = "966538474397";
@@ -25,40 +49,68 @@ const Odoo = ({ locale }: { locale: string }) => {
   return (
     <section
       id="Odoo"
-      className="w-full space-y-8 md:space-y-12 bg-[#F2F2F2] py-10 px-4 rounded-lg"
+      className="w-full bg-white py-20 px-4 md:px-8 lg:px-20"
     >
-      <header className="font-primary text-center flex flex-col items-center gap-2 md:gap-4 px-2.5 text-xs md:text-sm xl:text-[15px]">
-<h1 className="text-4xl md:text-5xl font-bold max-w-[400px] sm:max-w-[500px] md:max-w-[600px] 2xl:leading-[43px]">
-  <Image
-    src="/odoo_logo.png"  // <-- Make sure this image is in your public/ folder
-    alt="Odoo"
-    width={200}           // Adjust size as needed
-    height={50}
-    className="object-contain"
-  />
-</h1>
-        <p className="text-base md:text-lg font-medium text-gray-700 max-w-[800px] xl:max-w-[550px]">
+      <div className="text-center mb-14 -mt-20">
+        <Image
+          src="/odoo_logo.png"
+          alt="Odoo"
+          width={180}
+          height={50}
+          className="mx-auto object-contain"
+        />
+        
+        <p className="mt-6 text-[#4F4F4F] text-base md:text-lg font-medium max-w-2xl mx-auto">
           {t("Odoo-description")}
         </p>
-      </header>
+        <div className="mt-20 max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg">
+          <video
+            src="/video_homepage.webm"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-auto object-cover rounded-3xl"
+          />
+        </div>
+      </div>
+      <p className=" mt-28 -mb-16 text-center text-[#4F4F4F] text-base md:text-5xl font-medium max-w-2xl mx-auto">
+          {t("Odoo-services")}
+        </p>
       <div
-        className="w-full grid grid-cols-2 xl:grid-cols-3 gap-4 xl:gap-6"
+        className=" mt-28 grid grid-cols-1 md:grid-cols-2 3xl:grid-cols-3 gap-10"
         dir={locale === "ar" ? "rtl" : "ltr"}
       >
+        
         {serviceItems.map((item, index) => {
-          const title = t(item.titleKey);
-          const description = t(item.descriptionKey);
           const message = encodeURIComponent(item.message);
           const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
+
           return (
             <a
               key={index}
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="block cursor-pointer transition-transform hover:scale-105 duration-200 bg-white rounded-xl shadow-sm p-4"
+              className="group bg-white rounded-xl shadow-lg overflow-hidden transition duration-300"
             >
-              <Service icon={item.icon} title={title} description={description} />
+              <div className="relative h-56 w-full">
+                <Image
+                  src={item.image}
+                  alt="Service"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative -mt-6 z-10 px-6 py-8 bg-white rounded-t-xl shadow-xl">
+                <div className="absolute -top-6 right-6 bg-white rounded-full p-3 shadow-md">
+                  {item.icon}
+                </div>
+                <h3 className="text-lg font-bold text-[#333] mb-2 text-right">{item.title}</h3>
+                <p className="text-sm text-[#666] leading-relaxed text-right mb-2">
+                  {item.description}
+                </p>
+              </div>
             </a>
           );
         })}

@@ -52,6 +52,7 @@
     "cr-label": "Cr-Number:",
     "odoo-erp-title": "ERP",
     "Odoo-description": "All in one enterprise services platform",
-    "odoo-erp-description": "Enterprise Resource Planning"
+    "odoo-erp-description": "Enterprise Resource Planning",
+    "Odoo-services": "Odoo Services"
   }
 }
