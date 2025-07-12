@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import React from "react";
-import Service from "./service";
+// import Service from "./service";
 import Image from "next/image";
 import { ShoppingCart, Settings, LayoutDashboard } from "lucide-react";
 
@@ -51,7 +51,7 @@ const Odoo = ({ locale }: { locale: string }) => {
       id="Odoo"
       className="w-full bg-white py-20 px-4 md:px-8 lg:px-20"
     >
-      <div className="text-center mb-14 -mt-20">
+      <div className="text-center mb-14">
         <Image
           src="/odoo_logo.png"
           alt="Odoo"
@@ -59,24 +59,22 @@ const Odoo = ({ locale }: { locale: string }) => {
           height={50}
           className="mx-auto object-contain"
         />
-        
         <p className="mt-6 text-[#4F4F4F] text-base md:text-lg font-medium max-w-2xl mx-auto">
           {t("Odoo-description")}
         </p>
-        <div className="mt-20 max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg">
+        <div className="mt-10 max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg">
           <video
             src="/video_homepage.webm"
             autoPlay
             loop
             muted
             playsInline
-            className="w-full h-auto object-cover rounded-3xl"
+            controls
+            className="w-full h-auto object-cover rounded-xl"
           />
         </div>
       </div>
-      <p className=" mt-28 -mb-16 text-center text-[#4F4F4F] text-base md:text-5xl font-medium max-w-2xl mx-auto">
-          {t("Odoo-services")}
-        </p>
+
       <div
         className=" mt-28 grid grid-cols-1 md:grid-cols-2 3xl:grid-cols-3 gap-10"
         dir={locale === "ar" ? "rtl" : "ltr"}
