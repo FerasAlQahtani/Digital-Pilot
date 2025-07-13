@@ -10,6 +10,12 @@ const Odoo = ({ locale }: { locale: string }) => {
 
   const serviceItems = [
     {
+      icon: <ShoppingCart className="text-[#875A7B] w-6 h-6" />,
+      title: "Odoo Enterprise Implemetnation",
+      message: "Hello, I’m interested in designing an online store using Odoo.",
+      image: "/Odoo Implementation Service Design.png"
+    },
+    {
       icon: <LayoutDashboard className="text-[#875A7B] w-6 h-6" />,
       title: "Odoo Module Customization",
       message: "I'm interested in using Odoo POS solution.",
