@@ -8,14 +8,14 @@ const Footer = ({ mini, locale }: { mini?: boolean; locale: string }) => {
   const t = useTranslations("Landing");
 
   return (
-    <div className="absolute w-full flex-col font-primary bg-gradient-to-r from-blue-600 to-green-600">
+    <footer className="w-full font-primary bg-gradient-to-r from-blue-600 to-green-600">
       {!mini && (
         <div
           className={`w-full px-6 pt-0 pb-0 ${
             locale === "ar" ? "text-right" : ""
           }`}
         >
-          
+          {/* Optional non-mini content */}
         </div>
       )}
 
@@ -42,13 +42,12 @@ const Footer = ({ mini, locale }: { mini?: boolean; locale: string }) => {
         </div>
       </div>
 
-      {/* Centered copyright line */}
       <div className="w-full flex justify-center pb-4">
         <p className="text-xs text-white">
           All rights reserved © 2024
         </p>
       </div>
-    </div>
+    </footer>
   );
 };
 
