@@ -1,12 +1,11 @@
 "use client";
 
-// import { useTranslations } from "next-intl";
+
 import React from "react";
 import Image from "next/image";
 import { ShoppingCart, Settings, LayoutDashboard } from "lucide-react";
 
 const Odoo = ({ locale }: { locale: string }) => {
-  // const t = useTranslations("Landing");
 
   const serviceItems = [
     {
