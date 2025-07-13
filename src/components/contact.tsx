@@ -70,6 +70,7 @@ const Contact = () => {
           description: t("error-description"),
           variant: "destructive",
         });
+        console.error(error);
       }
     }
     triggerLoading();
