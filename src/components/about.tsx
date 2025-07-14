@@ -1,88 +1,73 @@
-"use client"
+"use client";
 
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion";
+import Service from "./service";
+import Image from "next/image";
+import { CodeIcon } from "lucide-react";
 
-const About = ({locale}: {locale: string}) => {
+const About = ({ locale }: { locale: string }) => {
   const t = useTranslations("Landing");
 
+  const serviceItems = [
+    {
+      image: "/Project design LL.jpg",
+      icon: <CodeIcon className="text-gradientend h-7 w-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+      titleKey: "Project-1",
+      descriptionKey: "Project-1-describtion",
+      message: "Hi, I'm interested in your services."
+    }
+  ];
+
+  const phone = "966538474397";
+
   return (
-    <section
-      id="about"
-      className="w-full space-y-8 md:space-y-12"
-      dir={locale === "ar" ? "rtl" : "ltr"}
-    >
+    <section id="services" className="w-full space-y-8 md:space-y-12">
       <header className="font-primary text-center flex flex-col items-center gap-2 md:gap-4 px-2.5 text-xs md:text-sm xl:text-[15px]">
-        <motion.h1
-          initial={{ y: -80 }}
-          animate={{ y: 0 }}
-          className="text-4xl md:text-5xl font-bold max-w-[400px] sm:max-w-[500px] md:max-w-[600px] 2xl:leading-[43px]"
-        >
+        <h1 className="text-4xl md:text-5xl font-bold max-w-[400px] sm:max-w-[500px] md:max-w-[600px] 2xl:leading-[43px]">
           {t("about-title")}
-        </motion.h1>
-        <motion.p
-          initial={{ y: -50 }}
-          animate={{ y: 0 }}
-          className="text-base md:text-lg font-medium text-muted max-w-[800px] xl:max-w-[550px]"
-        >
+        </h1>
+        <p className="text-base md:text-lg font-medium text-muted max-w-[800px] xl:max-w-[550px]">
           {t("about-subtitle")}
-        </motion.p>
+        </p>
       </header>
-      <motion.div
-        initial={{ y: 40, scale: 0.8 }}
-        animate={{ y: 0, scale: 1 }}
-        className="w-full space-y-6 md:space-y-10"
+      <div
+        className="w-full grid grid-cols-2 xl:grid-cols-3 gap-2 xl:gap-6"
+        dir={locale === "ar" ? "rtl" : "ltr"}
       >
-        <div className="w-full flex items-center gap-6 md:gap-10 xl:gap-16">
-          <div className="w-1/2 md:w-5/12 space-y-10">
-            <h1 className="hidden lg:block max-w-[250px] md:max-w-[300px] lg:max-w-[450px] xl:max-w-[550px] font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
-              {t("about-us-title")}
-            </h1>
-            <Image
-              draggable={false}
-              priority
-              src="/assets/about-assets-lg.png"
-              alt="About"
-              width={500}
-              height={750}
-            />
-          {/* </div>
-          <div className="w-1/2 md:w-7/12 space-y-10 md:space-y-14 xl:space-y-20">
-            <div className="w-full flex items-center justify-between">
-              <div>
-                <Image
-                  draggable={false}
-                  priority
-                  src={`/assets/about-assets-md${
-                    locale === "ar" ? "-ar" : ""
-                  }.png`}
-                  alt="About"
-                  width={480}
-                  height={750}
+        {serviceItems.map((item, index) => {
+          const title = t(item.titleKey);
+          const description = t(item.descriptionKey);
+          const message = encodeURIComponent(item.message || title);
+          const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
+
+          return (
+            <a
+              key={index}
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block cursor-pointer transition-transform hover:scale-105 duration-200"
+            >
+              <div className="w-full h-full bg-white p-4 rounded-xl shadow-md flex flex-col items-center text-center gap-4">
+                {item.image && (
+                  <Image
+                    src={item.image}
+                    alt={title}
+                    width={340}
+                    height={64}
+                  />
+                )}
+                <Service
+                  icon={item.icon}
+                  title={title}
+                  description={description}
                 />
               </div>
-              <div>
-                <Image
-                  draggable={false}
-                  priority
-                  src="/assets/about-assets-sm.png"
-                  alt="About"
-                  width={220}
-                  height={300}
-                />
-              </div>
-            </div> */}
-            <p className="w-full hidden lg:block text-justify text-sm sm:text-base md:text-lg xl:text-xl">
-              {t("about-us-description")}
-            </p>
-            <p className="w-full lg:hidden font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
-              {t("about-us-title")}
-            </p>
-          </div>
-        </div>
-      </motion.div>
+            </a>
+          );
+        })}
+      </div>
     </section>
   );
 };

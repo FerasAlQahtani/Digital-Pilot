@@ -25,7 +25,7 @@
     "maintenance-title": "Maintenance",
     "maintenance-description": "We provide maintenance services to clients beyond project completion. Also, to those who have already products and need enhancement.",
     "about-title": "Projects",
-    "about-subtitle": "Will be here soon...",
+    "about-subtitle": "Projects we have made with love❤️...",
     "about-us-title": "This component is under construction...",
     "about-us-description": "This component is under construction...",
     "footer-title": "Try Cyber Pilot and see how creative our solutions can be...",
@@ -53,6 +53,10 @@
     "odoo-erp-title": "ERP",
     "Odoo-description": "All in one enterprise services platform",
     "odoo-erp-description": "Enterprise Resource Planning",
-    "Odoo-services": "Odoo Services"
+    "Odoo-services": "Odoo Services",
+    "Explore our Odoo services": "Click Here to Explore our Odoo services",
+    "Project-1": "UI/UX Design & Mobile devolpment",
+    "Project-1-describtion": "In this project we have devolped for a client a mobile app that serves his business needs and a web admin portal to adminstrate the mobile application. Also, we deveolped and setup his database schema and cloud backend hosting service"
+
   }
 }
