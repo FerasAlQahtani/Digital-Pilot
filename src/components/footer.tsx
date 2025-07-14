@@ -4,11 +4,10 @@ import { useTranslations } from 'next-intl';
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
 const Footer = ({ mini, locale }: { mini?: boolean; locale: string }) => {
   const t = useTranslations("Landing");
-  const pathname = usePathname();
+
 
   const links = [
     { href: `/${locale}`, label: "home", id: "Home" },
