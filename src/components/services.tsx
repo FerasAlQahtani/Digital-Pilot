@@ -10,8 +10,7 @@ import {
   Laptop,
   SearchCheck,
   Settings,
-  Smartphone,
-  CodeIcon
+  Smartphone
 } from "lucide-react";
 
 const Services = ({ locale }: { locale: string }) => {
