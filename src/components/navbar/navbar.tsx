@@ -5,7 +5,6 @@ import ChangeMode from "./changeMode";
 import { useTranslations } from "next-intl";
 import LandingDrawer from "./drawer";
 import Navigation from "./navigation";
-import Image from "next/image";
 
 const LandingNavbar = ({ locale }: { locale: string }) => {
   const t = useTranslations("Landing");
