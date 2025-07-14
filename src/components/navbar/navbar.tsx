@@ -14,7 +14,7 @@ const LandingNavbar = ({ locale }: { locale: string }) => {
     <nav className={`w-full bg-background font-primary py-7 flex justify-between items-center px-6 md:px-10 xl:px-16 sticky top-0 z-50 dark:border-b shadow-sm ${locale === 'ar' && 'flex-row-reverse'}`}>
 <div className="flex items-center gap-3 mt-1">
   <Link 
-    href={`/${locale}/Odoo`}    
+    href={`/${locale}/`}    
   >
   <img 
   src="/logo.png" alt="Cyber Pilot Logo" 
