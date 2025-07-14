@@ -58,15 +58,7 @@ const Header = ({ locale }: { locale: string }) => {
           animate={{ scale: 1 }}
           className="w-fit relative flex justify-center items-center flex-shrink"
         >
-          <Image
-            draggable={false}
-            priority
-            src="/assets/header-dashboard.svg"
-            alt="Preview"
-            width={1450}
-            height={850}
-            quality={100}
-          />
+         
         </motion.div>
       </div>
     </section>
