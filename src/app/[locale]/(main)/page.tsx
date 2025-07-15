@@ -1,7 +1,13 @@
 import About from "@/components/about";
 import Services from "@/components/services";
 
-const Page = async ({ params }: { params: { locale: string } }) => {
+const Page = async ({
+  params,
+}: {
+  params: {
+    locale: string;
+  };
+}) => {
   const { locale } = params;
 
   return (
