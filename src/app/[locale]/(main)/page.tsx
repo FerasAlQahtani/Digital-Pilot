@@ -1,13 +1,11 @@
 import About from "@/components/about";
 import Services from "@/components/services";
 
-interface PageProps {
-  params: {
-    locale: string;
-  };
+interface Props {
+  params: { locale: string };
 }
 
-const Page = async ({ params }: PageProps) => {
+const Page = async ({ params }: Props) => {
   const { locale } = params;
 
   return (
@@ -19,3 +17,4 @@ const Page = async ({ params }: PageProps) => {
 };
 
 export default Page;
+
