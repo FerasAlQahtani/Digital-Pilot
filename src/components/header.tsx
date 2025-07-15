@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
@@ -12,7 +12,6 @@ interface HeaderProps {
 
 const Header = ({ locale }: HeaderProps) => {
   const t = useTranslations("Landing");
-  const currentLocale = useLocale(); // optional validation or debugging
 
   return (
     <section id="Home" className="w-full font-primary space-y-8 md:space-y-12">
