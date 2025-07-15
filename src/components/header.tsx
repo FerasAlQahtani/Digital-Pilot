@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -6,7 +6,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const Header = ({ locale }: { locale: string }) => {
+const Header = () => {
   const t = useTranslations("Landing");
 
   return (
