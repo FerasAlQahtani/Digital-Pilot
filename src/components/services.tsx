@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import React from "react";
 import Service from "./service";
 import Link from "next/link";
+import Image from "next/image";
 import {
   BarChart2,
   Hash,
@@ -73,8 +74,9 @@ const Services = ({ locale }: { locale: string }) => {
           href={`/${locale}/Odoo`}
           className="block w-full max-w-xl bg-white p-16 rounded-xl shadow-md text-center hover:shadow-lg transition-all border border-gray-200 hover:scale-105"
         >
-          <img src="odoo_logo.png" className="text-xl font-semibold mb-2 text-gradientend"></img>
-          <img src="Odoo services prop.png" className="text-xl font-semibold mb-2 text-gradientend"></img>
+        <Image src="/odoo_logo.png" alt="Odoo Logo" width={400} height={100} className="ml-8 text-xl font-semibold mb-8 text-gradientend" />
+        <Image src="/Odoo services prop.png" alt="Odoo Services" width={400} height={100} className="ml-8 text-xl font-semibold mb-2 text-gradientend" />
+
           <p className="mt-8 text-lg text-muted-foreground">{t("Explore our Odoo services")}</p>
         </Link>
       </div>
