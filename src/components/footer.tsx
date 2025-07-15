@@ -21,9 +21,9 @@ const Footer = ({ mini, locale }: { mini?: boolean; locale: string }) => {
   return (
     <footer className="w-full font-primary bg-gradient-to-r from-blue-600 to-green-600 text-white">
       {!mini && (
-        <div className="w-full px-6 pt-10 pb-4">
-          <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 ${locale === "ar" ? "text-right" : "text-left"}`}>
-            <div className="flex flex-col gap-2">
+        <div className="w-full px-16 pt-10 pb-2">
+          <div className={`grid grid-cols-1 md:grid-cols-8 gap-x-0 gap-y-2 ${locale === "ar" ? "text-right" : "text-left"}`}>
+            <div className="flex flex-col gap-1.5">
               <h4 className="text-sm font-bold mb-2 uppercase">{t("navigation")}</h4>
               {column1.map((link) => (
                 <Link
@@ -46,7 +46,7 @@ const Footer = ({ mini, locale }: { mini?: boolean; locale: string }) => {
               ))}
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-1.5">
               <h4 className="text-sm font-bold mb-2 uppercase">{t("contact")}</h4>
               {column2.map((link) => (
                 <Link
@@ -57,10 +57,18 @@ const Footer = ({ mini, locale }: { mini?: boolean; locale: string }) => {
                   {t(link.label)}
                 </Link>
               ))}
+              <div className="flex gap-3 mt-2">
+                <Link href="https://www.linkedin.com/company/cyber-pilot-sa" target="_blank" rel="noopener noreferrer">
+                  <Image src="/LinkedIn_icon.svg.webp" alt="LinkedIn" width={24} height={24} />
+                </Link>
+                <Link href="https://wa.me/966538474397" target="_blank" rel="noopener noreferrer">
+                  <Image src="/whatsapp-svgrepo-com.svg" alt="WhatsApp" width={24} height={24} />
+                </Link>
+              </div>
             </div>
 
-            <div className="flex flex-col gap-3 items-start md:items-end">
-              <div className="flex items-center gap-3">
+            <div className="flex flex-col gap-3 col-span-full md:col-span-2 md:col-start-7 items-end">
+              <div className="flex items-center gap-3 justify-end w-full">
                 <Image
                   src="/business-sa-logo.png"
                   alt="Business SA Logo"
