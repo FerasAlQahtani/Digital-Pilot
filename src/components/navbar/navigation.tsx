@@ -21,7 +21,7 @@ const Navigation = ({
     { href: `/${locale}/Odoo`, label: "Odoo", id: "Odoo" },
     { href: `/${locale}/services`, label: "services", id: "Services" },
     { href: `/${locale}/about`, label: "about", id: "About" },
-    { href: `/${locale}/contact`, label: "contact", id: "Contact" },
+    // { href: `/${locale}/contact`, label: "contact", id: "Contact" },
   ];
 
   return (

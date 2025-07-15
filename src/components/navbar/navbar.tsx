@@ -31,7 +31,7 @@ const LandingNavbar = ({ locale }: { locale: string }) => {
         <ChangeMode noChevron />
         <ChangeLang locale={locale} noChevron />
         <Link
-          href={`/${locale}/contact`}
+          href="https://wa.me/966538474397?text=Hello%2C%20I%20am%20interested%20in%20your%20services."
           className="inline-flex items-center justify-center whitespace-nowrap rounded-md ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 px-5 py-2 h-8 space-x-2 text-sm font-medium bg-gradient-to-r from-gradientstart to-gradientend !text-white"
         >
           <span>{t("contact-us")}</span>

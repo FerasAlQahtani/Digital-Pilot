@@ -31,7 +31,7 @@ const Header = ({ locale }: { locale: string }) => {
         <motion.div initial={{ y: 40 }} animate={{ y: 0 }}>
           <div className="flex gap-1 items-center">
             <Link
-              href={`${locale}/contact`}
+              href="https://wa.me/966538474397?text=Hello%2C%20I%20am%20interested%20in%20your%20services."
               className="bg-gradient-to-r from-gradientstart to-gradientend text-sm font-semibold sm:text-[15px] text-white py-2 px-10 rounded-md"
             >
               {t("header-button")}
