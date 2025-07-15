@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
@@ -12,6 +12,7 @@ interface HeaderProps {
 
 const Header = ({ locale }: HeaderProps) => {
   const t = useTranslations("Landing");
+  const currentLocale = useLocale(); // optional validation or debugging
 
   return (
     <section id="Home" className="w-full font-primary space-y-8 md:space-y-12">
@@ -35,7 +36,7 @@ const Header = ({ locale }: HeaderProps) => {
         <motion.div initial={{ y: 40 }} animate={{ y: 0 }}>
           <div className="flex gap-1 items-center">
             <Link
-              href="https://wa.me/966538474397?text=Hello%2C%20I%20am%20interested%20in%20your%20services."
+              href={`/${locale}/contact`}
               className="bg-gradient-to-r from-gradientstart to-gradientend text-sm font-semibold sm:text-[15px] text-white py-2 px-10 rounded-md"
             >
               {t("header-button")}
