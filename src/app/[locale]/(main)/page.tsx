@@ -1,14 +1,7 @@
 import About from "@/components/about";
 import Services from "@/components/services";
 
-// ✅ تعريف نوع واضح بدلًا من any
-interface PageProps {
-  params: {
-    locale: string;
-  };
-}
-
-const Page = async ({ params }: PageProps) => {
+const Page = async ({ params }: { params: { locale: string } }) => {
   const { locale } = params;
 
   return (
