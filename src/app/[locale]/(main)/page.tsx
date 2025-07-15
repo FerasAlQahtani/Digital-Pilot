@@ -1,14 +1,11 @@
 import About from "@/components/about";
 import Services from "@/components/services";
 
-const Page = async ({
-  params,
-}: {
-  params: {
-    locale: string;
-  };
-}) => {
-  const { locale } = params;
+type Params = Promise<{ locale: string }>
+
+const Page = async ({ params }: { params: Params }) => {
+
+  const { locale } = await params;
 
   return (
     <main className="w-full text-foreground bg-background py-16 md:py-20 flex flex-col items-center gap-14 md:gap-20 px-4 sm:6 md:px-12 lg:px-20 xl:px-32 2xl:px-48">
@@ -16,6 +13,6 @@ const Page = async ({
       <About locale={locale} />
     </main>
   );
-};
+}
 
 export default Page;
