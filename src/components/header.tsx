@@ -6,7 +6,11 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const Header = () => {
+interface HeaderProps {
+  locale: string;
+}
+
+const Header = ({ locale }: HeaderProps) => {
   const t = useTranslations("Landing");
 
   return (
