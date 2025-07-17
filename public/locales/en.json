@@ -56,7 +56,7 @@
     "Odoo-services": "Odoo Services",
     "Explore our Odoo services": "Click Here to Explore our Odoo services",
     "Project-1": "UI/UX Design & Mobile devolpment",
-    "Project-1-describtion": "In this project we have devolped for a client a mobile app that serves his business needs and a web admin portal to adminstrate the mobile application. Also, we deveolped and setup his database schema and cloud backend hosting service",
+    "Project-1-describtion": "In this project, we developed a custom mobile application designed to meet the client’s business requirements, along with a web-based admin portal for managing and monitoring the app. Additionally, we designed and implemented the database schema and configured a scalable cloud-based backend hosting solution.",
     "navigation": "navigation"
   }
 }
