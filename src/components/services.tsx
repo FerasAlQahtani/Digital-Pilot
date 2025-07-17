@@ -69,17 +69,33 @@ const Services = ({ locale }: { locale: string }) => {
         </p>
       </header>
 
-      <div className="w-full flex justify-center">
-        <Link
-          href={`/${locale}/Odoo`}
-          className="block w-full max-w-xl bg-white p-16 rounded-xl shadow-md text-center hover:shadow-lg transition-all border border-gray-200 hover:scale-105"
-        >
-        <Image src="/odoo_logo.png" alt="Odoo Logo" width={400} height={100} className="ml-8 text-xl font-semibold mb-8 text-gradientend" />
-        <Image src="/Odoo services prop.png" alt="Odoo Services" width={400} height={100} className="ml-8 text-xl font-semibold mb-2 text-gradientend" />
+<div className="w-full flex justify-center">
+  <Link
+    href={`/${locale}/Odoo`}
+    className="block w-full max-w-xl bg-white p-8 sm:p-16 rounded-xl shadow-md text-center hover:shadow-lg transition-all border border-gray-200 hover:scale-105"
+  >
+    <Image
+      src="/odoo_logo.png"
+      alt="Odoo Logo"
+      width={400}
+      height={100}
+      className="mx-auto mb-4 sm:mb-8"
+    />
 
-          <p className="mt-8 text-lg text-muted-foreground">{t("Explore our Odoo services")}</p>
-        </Link>
-      </div>
+    <Image
+      src="/Odoo services prop.png"
+      alt="Odoo Services"
+      width={400}
+      height={100}
+      className="mx-auto mb-4 sm:mb-2"
+    />
+
+    <p className="mt-4 sm:mt-8 text-lg text-muted-foreground">
+      {t("Explore our Odoo services")}
+    </p>
+  </Link>
+</div>
+
 
       <div
         className="w-full grid grid-cols-2 xl:grid-cols-3 gap-2 xl:gap-6"
