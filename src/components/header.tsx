@@ -7,10 +7,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 interface HeaderProps {
-  locale: string;
+  locale?: string; // Made optional since it's unused
 }
 
-const Header = ({ locale }: HeaderProps) => {
+const Header = ({}: HeaderProps) => { // Destructure nothing since 'locale' is unused
   const t = useTranslations("Landing");
 
   return (
