@@ -27,10 +27,10 @@ export async function sendEmail({
   await transporter.sendMail({
     from: process.env.AUTH_EMAIL,
     to: "sales@cyberpilot.sa" as string,
-    subject: `Cyber Pilot: New message from ${firstName} ${lastName}`,
+    subject: `Code Pilot: New message from ${firstName} ${lastName}`,
     html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-        <h2 style="color: #111;">New message from Cyber Pilot</h2>
+        <h2 style="color: #111;">New message from Code Pilot</h2>
         <p><strong>First Name:</strong> ${firstName}</p>
         <p><strong>Last Name:</strong> ${lastName}</p>
         <p><strong>Email:</strong> ${email}</p>

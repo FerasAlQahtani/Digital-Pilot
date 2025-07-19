@@ -16,12 +16,12 @@ const LandingNavbar = ({ locale }: { locale: string }) => {
     href={`/${locale}/`}    
   >
   <img 
-  src="/logo.png" alt="Cyber Pilot Logo" 
+  src="/logo.png" alt="Code Pilot Logo" 
   height={50}
   width={50}
    />
   </Link>
-  <h1 className="font-bold -mt-3">Cyber Pilot</h1>
+  <h1 className="font-bold -mt-3">Code Pilot</h1>
 </div>    
       <div className={`hidden xl:flex items-center gap-8 text-1x2 font-medium text-muted 2xl:absolute 2xl:bottom-[55%] 2xl:right-[50%] 2xl:translate-x-1/2 2xl:translate-y-1/2 ${locale === 'ar' && 'flex-row-reverse'}`}>
         <Navigation locale={locale} />
