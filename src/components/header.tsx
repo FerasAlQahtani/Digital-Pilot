@@ -65,7 +65,7 @@ const Header = ({}: HeaderProps) => { // Destructure nothing since 'locale' is u
           <Image
             draggable={false}
             priority
-            src="/assets/header-dashboard.svg"
+            src="/Phases explained.png"
             alt="Preview"
             width={1450}
             height={850}
