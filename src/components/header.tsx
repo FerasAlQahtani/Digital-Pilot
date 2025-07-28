@@ -55,7 +55,7 @@ className="
   -mt-22 
   md:-mt-16 
   lg:-mt-16 
-  xl:-mt-16
+  xl:-mt-12
 "
 >
   <Image
