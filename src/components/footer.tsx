@@ -1,6 +1,5 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,7 +11,6 @@ interface FooterProps {
 }
 
 const Footer = ({}: FooterProps) => {
-  const t = useTranslations("Landing");
 
   return (
     <footer className="w-full px-8 py-12 bg-white text-gray-800 font-primary border-t border-black">
