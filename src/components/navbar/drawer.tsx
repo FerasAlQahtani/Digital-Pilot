@@ -13,6 +13,8 @@ import { useTranslations } from "next-intl";
 import ChangeMode from "./changeMode";
 import ChangeLang from "./changeLang";
 import Navigation from "./navigation";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 const LandingDrawer = ({ locale }: { locale: string }) => {
   const [open, setOpen] = React.useState<boolean>(false);
@@ -27,7 +29,7 @@ const LandingDrawer = ({ locale }: { locale: string }) => {
         <SheetTitle className="hidden">Drawer</SheetTitle>
         <div className="w-full py-3.5 flex flex-row justify-between items-center px-6 md:px-10 xl:px-16 shadow-sm">
           <h1 className="text-1xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
-              Code Pilot
+              Digital Pilot
           </h1>        
           <X
             className="cursor-pointer h-5 w-5"
@@ -44,6 +46,7 @@ const LandingDrawer = ({ locale }: { locale: string }) => {
               className="px-4 py-2 w-full h-10 inline-flex items-center justify-center whitespace-nowrap rounded-md ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 space-x-2 text-sm font-medium bg-gradient-to-r from-gradientstart to-gradientend !text-white"
             >
               <span>{t("contact-us")}</span>
+                <FaWhatsapp className="text-lg" />
             </Link>
             <div className="w-full flex justify-between gap-2">
               <ChangeMode className="w-1/2 h-10" />

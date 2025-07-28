@@ -5,74 +5,71 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
 
 interface HeaderProps {
-  locale?: string; // Made optional since it's unused
+  locale?: string;
 }
 
-const Header = ({}: HeaderProps) => { // Destructure nothing since 'locale' is unused
+const Header = ({}: HeaderProps) => {
   const t = useTranslations("Landing");
 
   return (
-    <section id="Home" className="w-full font-primary space-y-8 md:space-y-12">
-      <header className="flex flex-col items-center gap-8 md:gap-10 px-2.5 text-xs md:text-sm xl:text-[15px]">
-        <div className="text-center flex flex-col items-center gap-2 md:gap-6">
+    <section id="Home" className="w-full font-primary overflow-x-hidden">
+      <header className="flex flex-col items-center px-4 text-center gap-6 md:gap-10">
+        {/* Header Text + Button */}
+        <div className="flex flex-col items-center gap-3 md:gap-5 mt-10">
           <motion.h1
             initial={{ y: -80 }}
             animate={{ y: 0 }}
-            className="text-4xl md:text-5xl font-bold max-w-[400px] sm:max-w-[500px] md:max-w-[600px] 2xl:leading-[43px]"
+            className="text-black text-2xl sm:text-4xl md:text-6xl font-bold leading-tight"
           >
             {t("header-title")}
           </motion.h1>
-          <motion.p
-            initial={{ y: -50 }}
+          {/* <motion.h1
+            initial={{ y: -60 }}
             animate={{ y: 0 }}
-            className="text-base md:text-lg font-medium text-muted max-w-[800px] xl:max-w-[550px]"
+            className="text-black text-2xl sm:text-3xl md:text-6xl font-bold"
           >
-            {t("header-description")}
-          </motion.p>
+            {t("Starts Here!")}
+          </motion.h1> */}
+
+<Link
+  href="https://wa.me/966538474397?text=Hello%2C%20I%20am%20interested%20in%20your%20services."
+  className="mt-2 md:mt-8 inline-flex items-center gap-2 bg-gradient-to-r from-gradientstart to-gradientend text-white font-semibold py-2 px-6 rounded-full shadow-lg text-sm sm:text-base"
+>
+  {t("header-button")}
+    <FaWhatsapp className="text-lg" />
+</Link>
         </div>
-        <motion.div initial={{ y: 40 }} animate={{ y: 0 }}>
-          <div className="flex gap-1 items-center">
-            <Link
-              href="https://wa.me/966538474397?text=Hello%2C%20I%20am%20interested%20in%20your%20services."
-              className="bg-gradient-to-r from-gradientstart to-gradientend text-sm font-semibold sm:text-[15px] text-white py-2 px-10 rounded-md"
-            >
-              {t("header-button")}
-            </Link>
-            <Link
-              className="bg-gradient-to-r from-[#15a360] to-[#25d366] text-sm font-semibold sm:text-[15px] text-white py-2 px-2 rounded-md"
-              href="https://wa.me/966538474397?text=Hello%2C%20I%20am%20interested%20in%20your%20services."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/assets/icons/whatsapp.svg"
-                width={20}
-                height={20}
-                alt="WhatsAPP"
-              />
-            </Link>
-          </div>
-        </motion.div>
+
+       {/* Image */}
+<motion.div
+  initial={{ scale: 0.95 }}
+  animate={{ scale: 1 }}
+className="
+  w-full 
+  max-w-[1400px] 
+  mx-auto 
+  px-4 
+  -mt-24 
+  md:-mt-48 
+  lg:-mt-64 
+  xl:-mt-80
+"
+>
+  <Image
+    draggable={false}
+    priority
+    src="/Process_Explained_Transparent.png"
+    alt="Preview"
+    width={1450}
+    height={850}
+    quality={100}
+    className="rounded-lg w-full h-auto object-cover"
+  />
+</motion.div>
       </header>
-      <div className="w-full flex justify-center items-center">
-        <motion.div
-          initial={{ scale: 0.8 }}
-          animate={{ scale: 1 }}
-          className="w-fit relative flex justify-center items-center flex-shrink"
-        >
-          <Image
-            draggable={false}
-            priority
-            src="/Phases explained.png"
-            alt="Preview"
-            width={1450}
-            height={850}
-            quality={100}
-          />
-        </motion.div>
-      </div>
     </section>
   );
 };

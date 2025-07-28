@@ -5,6 +5,8 @@ import ChangeMode from "./changeMode";
 import { useTranslations } from "next-intl";
 import LandingDrawer from "./drawer";
 import Navigation from "./navigation";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 const LandingNavbar = ({ locale }: { locale: string }) => {
   const t = useTranslations("Landing");
@@ -21,7 +23,7 @@ const LandingNavbar = ({ locale }: { locale: string }) => {
   width={50}
    />
   </Link>
-  <h1 className="font-bold -mt-3">Code Pilot</h1>
+  <h1 className="font-bold -mt-3">Digital Pilot</h1>
 </div>    
       <div className={`hidden xl:flex items-center gap-8 text-1x2 font-medium text-muted 2xl:absolute 2xl:bottom-[55%] 2xl:right-[50%] 2xl:translate-x-1/2 2xl:translate-y-1/2 ${locale === 'ar' && 'flex-row-reverse'}`}>
         <Navigation locale={locale} />
@@ -30,12 +32,14 @@ const LandingNavbar = ({ locale }: { locale: string }) => {
       <div className={`hidden xl:flex items-center gap-2 2xl:gap-3 min-w-fit ${locale === 'ar' && 'flex-row-reverse'}`}>
         <ChangeMode noChevron />
         <ChangeLang locale={locale} noChevron />
-        <Link
-          href="https://wa.me/966538474397?text=Hello%2C%20I%20am%20interested%20in%20your%20services."
-          className="inline-flex items-center justify-center whitespace-nowrap rounded-md ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 px-5 py-2 h-8 space-x-2 text-sm font-medium bg-gradient-to-r from-gradientstart to-gradientend !text-white"
-        >
-          <span>{t("contact-us")}</span>
-        </Link>
+<Link
+  href="https://wa.me/966538474397?text=Hello%2C%20I%20am%20interested%20in%20your%20services."
+  className="inline-flex items-center justify-center whitespace-nowrap rounded-full ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 px-5 py-5 h-8 space-x-2 text-sm font-medium bg-gradient-to-r from-gradientstart to-gradientend !text-white"
+>
+  <span>{t("contact-us")}</span>
+  <FaWhatsapp className="text-lg" />
+</Link>
+
       </div>
       <LandingDrawer locale={locale} />
     </nav>
