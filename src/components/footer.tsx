@@ -5,19 +5,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaWhatsapp, FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
 
+// ✅ Define props interface
+interface FooterProps {
+  locale?: string;
+}
 
-const Footer = () => {
+// ✅ Accept props
+const Footer: React.FC<FooterProps> = ({ locale }) => {
   return (
-    <footer className="w-full px-8 py-12 bg-white text-gray-800 font-primary border-t border-gray-300">
+    <footer className="w-full px-8 py-12 bg-white text-gray-800 font-primary border-t border-black">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         {/* Column 1: Logo, Description, Email */}
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2">
-            <Image src="/logo.png" alt=" Digital Pilot Logo" width={40} height={40} />
-            <h2 className="mb-2 text-2xl font-semibold"> Digital Pilot</h2>
+            <Image src="/logo.png" alt="Digital Pilot Logo" width={40} height={40} />
+            <h2 className="mb-2 text-2xl font-semibold">Digital Pilot</h2>
           </div>
           <p className="text-gray-600 max-w-xs leading-relaxed">
-             Digital Pilot is a Saudi Arabian digital solutions agency focused on
+            Digital Pilot is a Saudi Arabian digital solutions agency focused on
             secure, scalable tech solutions from design to deployment.
           </p>
           <p className="mt-11 text-sm text-gray-600">codepilot.c@gmail.com</p>
@@ -43,7 +48,7 @@ const Footer = () => {
           <p className="mt-10 text-sm text-gray-600">+966 53 847 4397</p>
         </div>
 
- {/* Column 3: Social Links & Legal */}
+        {/* Column 3: Social Links & Legal */}
         <div className="flex flex-col gap-4">
           <div>
             <h3 className="text-lg font-semibold mb-2">Follow Us</h3>
@@ -68,7 +73,7 @@ const Footer = () => {
             <Image src="/Business-sa-Cr-confirmation.png" alt="QR Code" width={80} height={80} />
           </div>
 
-          <p className="text-sm text-gray-600">© 2025  Digital Pilot. All rights reserved</p>
+          <p className="text-sm text-gray-600">© 2025 Digital Pilot. All rights reserved</p>
         </div>
       </div>
     </footer>
