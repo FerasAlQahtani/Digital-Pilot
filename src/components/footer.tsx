@@ -1,17 +1,19 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaWhatsapp, FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
 
-// ✅ Define props interface
+
 interface FooterProps {
   locale?: string;
 }
 
-// ✅ Accept props
-const Footer: React.FC<FooterProps> = ({ locale }) => {
+const Footer = ({}: FooterProps) => {
+  const t = useTranslations("Landing");
+
   return (
     <footer className="w-full px-8 py-12 bg-white text-gray-800 font-primary border-t border-black">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
