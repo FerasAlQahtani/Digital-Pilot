@@ -52,16 +52,16 @@ className="
   max-w-[1400px] 
   mx-auto 
   px-4 
-  -mt-24 
-  md:-mt-48 
-  lg:-mt-64 
-  xl:-mt-80
+  -mt-22 
+  md:-mt-16 
+  lg:-mt-16 
+  xl:-mt-16
 "
 >
   <Image
     draggable={false}
     priority
-    src="/Process_Explained_Transparent.png"
+    src="/Process_Explained_Transparent copy.png"
     alt="Preview"
     width={1450}
     height={850}
